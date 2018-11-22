@@ -60,6 +60,7 @@
                         '<td>'+data.todo.name+'</td>' +
                         '</tr>';
                     $todoList.find('tbody').append(newTodo);
+                    $todoText.val("");
                 } else {
                     alert('添加失败');
                 }
