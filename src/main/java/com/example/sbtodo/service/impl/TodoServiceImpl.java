@@ -15,7 +15,7 @@ public class TodoServiceImpl implements TodoService {
     private TodoDao todoDao = null;
 
     @Override
-    public Todo get(int id) {
+    public Todo get(Long id) {
         return todoDao.get(id);
     }
 
@@ -25,7 +25,7 @@ public class TodoServiceImpl implements TodoService {
     }
 
     @Override
-    public int deleteById(int id) {
+    public int deleteById(Long id) {
         return todoDao.deleteById(id);
     }
 

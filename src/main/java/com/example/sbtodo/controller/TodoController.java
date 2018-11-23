@@ -48,7 +48,7 @@ public class TodoController {
     }
 
     @PostMapping("/del")
-    public ModelAndView delete(@RequestParam int id) {
+    public ModelAndView delete(@RequestParam long id) {
         int deletedResult = todoService.deleteById(id);
 
         ModelAndView mv = new ModelAndView();

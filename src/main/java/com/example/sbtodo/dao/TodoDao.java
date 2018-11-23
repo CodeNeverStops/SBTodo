@@ -9,14 +9,14 @@ import java.util.List;
 public interface TodoDao {
 
     @Select("SELECT * FROM todolist WHERE id=#{id}")
-    Todo get(int id);
+    Todo get(Long id);
 
     @Insert("INSERT INTO todolist(name) VALUES(#{name})")
     @Options(useGeneratedKeys = true, keyProperty = "id", keyColumn = "id")
     int add(Todo todo);
 
     @Delete("DELETE FROM todolist WHERE id=#{id}")
-    int deleteById(int id);
+    int deleteById(Long id);
 
     @Select("SELECT * FROM todolist")
     List<Todo> getAll();

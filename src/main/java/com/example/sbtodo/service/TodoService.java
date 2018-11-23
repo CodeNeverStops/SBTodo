@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface TodoService {
 
-    Todo get(int id);
+    Todo get(Long id);
 
     int add(Todo todo);
 
-    int deleteById(int id);
+    int deleteById(Long id);
 
     List<Todo> getAll();
 
