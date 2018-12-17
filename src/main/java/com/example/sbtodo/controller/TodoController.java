@@ -2,6 +2,7 @@ package com.example.sbtodo.controller;
 
 import com.example.sbtodo.service.TodoService;
 import com.example.sbtodo.pojo.Todo;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -28,6 +29,7 @@ public class TodoController {
     }
 
     @PostMapping("/new")
+    @ApiOperation(value="创建新条目", notes = "API接口描述")
     public ModelAndView create(@RequestParam String name) {
         Todo todo = new Todo();
         todo.setName(name);
